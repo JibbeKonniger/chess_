@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class ChessGUI extends JFrame {
 
-    private static final int SQ         = 80;
-    private static final int RESTART_MS = 3000;
+    private static final int SQ         = 100;
+    private static final int RESTART_MS = 10000;
 
     private static final Color CLR_LIGHT     = new Color(240, 217, 181);
     private static final Color CLR_DARK      = new Color(181, 136, 99);
