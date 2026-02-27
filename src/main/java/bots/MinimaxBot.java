@@ -286,10 +286,11 @@ public class MinimaxBot implements ChessBot {
             if (piece.getPieceSide() == Side.WHITE) score += value;
             else                                     score -= value;
 
+            int pushBonus = Long.bitCount(board.getBitboard()) < 12 ? 50 : 20;
             if (piece.getPieceType() == PieceType.PAWN) {
                 int rank = sq.getRank().ordinal();
-                if (piece.getPieceSide() == Side.WHITE) score += rank * 20;
-                else                                     score += (7 - rank) * 20;
+                if (piece.getPieceSide() == Side.WHITE) score += rank * pushBonus;
+                else                                     score += (7 - rank) * pushBonus;
             }
         }
 
